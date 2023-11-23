@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.061" tests="15" errors="12" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.073" tests="15" errors="12" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="CA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\hesha\AppData\Local\Temp\surefire14852384928127067317\surefirebooter-20231122220847190_3.jar C:\Users\hesha\AppData\Local\Temp\surefire14852384928127067317 2023-11-22T22-08-47_072-jvmRun1 surefire-20231122220847190_1tmp surefire_0-20231122220847190_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\hesha\AppData\Local\Temp\surefire179903565538816083\surefirebooter-20231122223029085_3.jar C:\Users\hesha\AppData\Local\Temp\surefire179903565538816083 2023-11-22T22-30-28_981-jvmRun1 surefire-20231122223029085_1tmp surefire_0-20231122223029085_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.group11.assignment2_2.MyArrayList.MyArrayListTest"/>
     <property name="surefire.test.class.path" value="C:\Users\hesha\Desktop\SAIT\CPRG304-OOP3\Assignment2\Assignment2_2\target\test-classes;C:\Users\hesha\Desktop\SAIT\CPRG304-OOP3\Assignment2\Assignment2_2\target\classes;C:\Users\hesha\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\hesha\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\hesha\AppData\Local\Temp\surefire14852384928127067317\surefirebooter-20231122220847190_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\hesha\AppData\Local\Temp\surefire179903565538816083\surefirebooter-20231122223029085_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="20.0.2+9"/>
@@ -61,10 +61,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="testRemove_Object" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.008">
+  <testcase name="testRemove_Object" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.009">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.remove(MyArrayList.java:154)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testRemove_Object(MyArrayListTest.java:175)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testRemove_Object(MyArrayListTest.java:183)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -99,10 +99,10 @@
     <system-out><![CDATA[remove
 ]]></system-out>
   </testcase>
-  <testcase name="testGet" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.002">
+  <testcase name="testGet" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.001">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.get(MyArrayList.java:142)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testGet(MyArrayListTest.java:145)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testGet(MyArrayListTest.java:153)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -137,10 +137,10 @@
     <system-out><![CDATA[get
 ]]></system-out>
   </testcase>
-  <testcase name="testSet" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.002">
+  <testcase name="testSet" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.003">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.set(MyArrayList.java:160)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testSet(MyArrayListTest.java:191)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testSet(MyArrayListTest.java:199)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -175,7 +175,7 @@
     <system-out><![CDATA[set
 ]]></system-out>
   </testcase>
-  <testcase name="testClear" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
+  <testcase name="testClear" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.001">
     <system-out><![CDATA[clear
 ]]></system-out>
   </testcase>
@@ -183,10 +183,10 @@
     <system-out><![CDATA[size
 ]]></system-out>
   </testcase>
-  <testcase name="testAdd_int_Object" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
+  <testcase name="testAdd_int_Object" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.001">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.get(MyArrayList.java:142)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testAdd_int_Object(MyArrayListTest.java:83)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testAdd_int_Object(MyArrayListTest.java:89)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -221,10 +221,10 @@
     <system-out><![CDATA[add
 ]]></system-out>
   </testcase>
-  <testcase name="testAdd_Null" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
-    <error message="Index out of bounds" type="java.lang.IndexOutOfBoundsException"><![CDATA[java.lang.IndexOutOfBoundsException: Index out of bounds
-	at com.group11.assignment2_2.MyArrayList.MyArrayList.add(MyArrayList.java:75)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testAdd_Null(MyArrayListTest.java:97)
+  <testcase name="testAdd_Null" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.002">
+    <error message="Cannot add element of type null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot add element of type null
+	at com.group11.assignment2_2.MyArrayList.MyArrayList.add(MyArrayList.java:79)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testAdd_Null(MyArrayListTest.java:105)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -259,10 +259,10 @@
     <system-out><![CDATA[add null
 ]]></system-out>
   </testcase>
-  <testcase name="testContains" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
+  <testcase name="testContains" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.002">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.contains(MyArrayList.java:172)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testContains(MyArrayListTest.java:220)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testContains(MyArrayListTest.java:228)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -304,7 +304,7 @@
   <testcase name="testRemove_int" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.remove(MyArrayList.java:148)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testRemove_int(MyArrayListTest.java:160)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testRemove_int(MyArrayListTest.java:168)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -342,7 +342,7 @@
   <testcase name="testAddAll" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.addAll(MyArrayList.java:136)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testAddAll(MyArrayListTest.java:130)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testAddAll(MyArrayListTest.java:138)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -380,7 +380,7 @@
   <testcase name="testIsEmpty" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.isEmpty(MyArrayList.java:166)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testIsEmpty(MyArrayListTest.java:205)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testIsEmpty(MyArrayListTest.java:213)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -415,10 +415,10 @@
     <system-out><![CDATA[isEmpty
 ]]></system-out>
   </testcase>
-  <testcase name="testIterator" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
+  <testcase name="testIterator" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.001">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.iterator(MyArrayList.java:190)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testIterator(MyArrayListTest.java:263)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testIterator(MyArrayListTest.java:271)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -456,7 +456,7 @@
   <testcase name="testToArray_0args" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.toArray(MyArrayList.java:184)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testToArray_0args(MyArrayListTest.java:249)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testToArray_0args(MyArrayListTest.java:257)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -494,7 +494,7 @@
   <testcase name="testToArray_ObjectArr" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at com.group11.assignment2_2.MyArrayList.MyArrayList.toArray(MyArrayList.java:178)
-	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testToArray_ObjectArr(MyArrayListTest.java:235)
+	at com.group11.assignment2_2.MyArrayList.MyArrayListTest.testToArray_ObjectArr(MyArrayListTest.java:243)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)

@@ -17,6 +17,8 @@ import static org.junit.Assert.*;
  * @author hesha
  */
 public class MyArrayListTest {
+    private MyArrayList<Integer> instance;
+    int instanceSize = 0;
 
     public MyArrayListTest() {
     }
@@ -31,6 +33,11 @@ public class MyArrayListTest {
 
     @Before
     public void setUp() {
+        instance = new MyArrayList<>();
+        instance.add(2);
+        instance.add(18);
+        instanceSize = 2;
+
     }
 
     @After
@@ -42,9 +49,7 @@ public class MyArrayListTest {
      */
     @Test
     public void testSize() {
-        System.out.println("size");
-        MyArrayList<Object> instance = new MyArrayList<>();
-        int expResult = 0;
+        int expResult = instanceSize;
         int result = instance.size();
         assertEquals(expResult, result);
 
@@ -55,7 +60,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testClear() {
-        System.out.println("clear");
         MyArrayList<Object> instance = new MyArrayList<>();
         instance.clear();
         int result = instance.size();
@@ -68,7 +72,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testAdd_int_Object() {
-        System.out.println("add");
         int index = 0;
         int toAdd = 780403;
         MyArrayList<Integer> instance = new MyArrayList<>();
@@ -90,7 +93,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testAdd_Null() {
-        System.out.println("add null");
         MyArrayList<Integer> instance = new MyArrayList<>();
         instance.add(2);
         instance.add(18);
@@ -109,10 +111,7 @@ public class MyArrayListTest {
      */
     @Test
     public void testAdd_Object() {
-        System.out.println("add");
         int toAdd = 1;
-        MyArrayList<Integer> instance = new MyArrayList<>();
-
         instance.add(toAdd);
         boolean expResult = true;
         boolean result = instance.add(toAdd);
@@ -125,9 +124,7 @@ public class MyArrayListTest {
      */
     @Test
     public void testAddAll() {
-        System.out.println("addAll");
         ListADT toAdd = null;
-        MyArrayList instance = new MyArrayList<>();
         boolean expResult = false;
         boolean result = instance.addAll(toAdd);
         assertEquals(expResult, result);
@@ -140,9 +137,7 @@ public class MyArrayListTest {
      */
     @Test
     public void testGet() {
-        System.out.println("get");
         int index = 0;
-        MyArrayList instance = new MyArrayList();
         Object expResult = null;
         Object result = instance.get(index);
         assertEquals(expResult, result);
@@ -155,7 +150,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testRemove_int() {
-        System.out.println("remove");
         int index = 0;
         MyArrayList instance = new MyArrayList();
         Object expResult = null;
@@ -170,7 +164,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testRemove_Object() {
-        System.out.println("remove");
         Object toRemove = null;
         MyArrayList instance = new MyArrayList();
         Object expResult = null;
@@ -185,7 +178,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testSet() {
-        System.out.println("set");
         int index = 0;
         Object toChange = null;
         MyArrayList instance = new MyArrayList();
@@ -201,7 +193,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testIsEmpty() {
-        System.out.println("isEmpty");
         MyArrayList instance = new MyArrayList();
         boolean expResult = false;
         boolean result = instance.isEmpty();
@@ -215,7 +206,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testContains() {
-        System.out.println("contains");
         Object toFind = null;
         MyArrayList instance = new MyArrayList();
         boolean expResult = false;
@@ -230,7 +220,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testToArray_ObjectArr() {
-        System.out.println("toArray");
         Object[] toHold = null;
         MyArrayList instance = new MyArrayList();
         Object[] expResult = null;
@@ -245,7 +234,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testToArray_0args() {
-        System.out.println("toArray");
         MyArrayList instance = new MyArrayList();
         Object[] expResult = null;
         Object[] result = instance.toArray();
@@ -259,7 +247,6 @@ public class MyArrayListTest {
      */
     @Test
     public void testIterator() {
-        System.out.println("iterator");
         MyArrayList instance = new MyArrayList();
         Iterator expResult = null;
         Iterator result = instance.iterator();
