@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.048" tests="13" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MyArrayList.MyArrayListTest" time="0.001" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -61,17 +61,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="testToArray" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.004"/>
-  <testcase name="testGet" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
-  <testcase name="testSet" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
-  <testcase name="testClear" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
-  <testcase name="testSize" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
-  <testcase name="testAdd_int_Object" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
-  <testcase name="testAdd_Null" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
-  <testcase name="testContains" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.001"/>
-  <testcase name="testAdd_Object" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
-  <testcase name="testRemove_int" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
-  <testcase name="testAddAll" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.001"/>
-  <testcase name="testIsEmpty" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
-  <testcase name="testIterator" classname="com.group11.assignment2_2.MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testToArray" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testGet" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testSet" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testClear" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testSize" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testAdd_int_Object" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testAdd_Null" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testContains" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testAdd_Object" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testRemove_int" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testAddAll" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testIsEmpty" classname="MyArrayList.MyArrayListTest" time="0.0"/>
+  <testcase name="testIterator" classname="MyArrayList.MyArrayListTest" time="0.0"/>
 </testsuite>
