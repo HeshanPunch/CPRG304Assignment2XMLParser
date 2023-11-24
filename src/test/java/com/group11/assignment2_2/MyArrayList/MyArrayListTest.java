@@ -96,9 +96,7 @@ public class MyArrayListTest {
         MyArrayList<Integer> instance = new MyArrayList<>();
         instance.add(2);
         instance.add(18);
-        int index = 1;
         Integer toAdd = null;
-        instance.add(index, toAdd);
         assertThrows(NullPointerException.class, () -> {
             instance.add(toAdd);
         });
@@ -111,10 +109,11 @@ public class MyArrayListTest {
      */
     @Test
     public void testAdd_Object() {
-        int toAdd = 1;
-        instance.add(toAdd);
+        Object toAdd = 1;
+        MyArrayList<Object> objInstance = new MyArrayList<>();
+        objInstance.add(toAdd);
         boolean expResult = true;
-        boolean result = instance.add(toAdd);
+        boolean result = objInstance.add(toAdd);
         assertEquals(expResult, result);
 
     }
@@ -124,12 +123,21 @@ public class MyArrayListTest {
      */
     @Test
     public void testAddAll() {
-        ListADT toAdd = null;
-        boolean expResult = false;
-        boolean result = instance.addAll(toAdd);
+        MyArrayList<Integer> list1 = new MyArrayList<>();
+        list1.add(2);
+        list1.add(18);
+        list1.add(7);
+
+        MyArrayList<Integer> list2 = new MyArrayList<>();
+        list2.add(22);
+        list2.add(118);
+
+        int expecteTotalSize = 5;
+        int size = list1.size() + list2.size();
+        boolean expResult = true;
+        boolean result = list1.addAll(list2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expecteTotalSize, size);
     }
 
     /**
@@ -137,12 +145,14 @@ public class MyArrayListTest {
      */
     @Test
     public void testGet() {
-        int index = 0;
-        Object expResult = null;
-        Object result = instance.get(index);
+        MyArrayList<Integer> list1 = new MyArrayList<>();
+        list1.add(2);
+        list1.add(18);
+        list1.add(7);
+        int index = 1;
+        Object expResult = 18;
+        Object result = list1.get(index);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -150,27 +160,14 @@ public class MyArrayListTest {
      */
     @Test
     public void testRemove_int() {
-        int index = 0;
-        MyArrayList instance = new MyArrayList();
-        Object expResult = null;
+        int index = 1;
+        MyArrayList<Integer> list1 = new MyArrayList<>();
+        list1.add(2);
+        list1.add(18);
+        list1.add(7);
+        Object expResult = 18;
         Object result = instance.remove(index);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of remove method, of class MyArrayList.
-     */
-    @Test
-    public void testRemove_Object() {
-        Object toRemove = null;
-        MyArrayList instance = new MyArrayList();
-        Object expResult = null;
-        Object result = instance.remove(toRemove);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -178,14 +175,16 @@ public class MyArrayListTest {
      */
     @Test
     public void testSet() {
-        int index = 0;
-        Object toChange = null;
-        MyArrayList instance = new MyArrayList();
-        Object expResult = null;
+        int index = 1;
+        int toChange = 780403;
+        MyArrayList<Integer> list1 = new MyArrayList<>();
+        list1.add(2);
+        list1.add(18);
+        list1.add(7);
+
+        Object expResult = 18;
         Object result = instance.set(index, toChange);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -193,12 +192,21 @@ public class MyArrayListTest {
      */
     @Test
     public void testIsEmpty() {
-        MyArrayList instance = new MyArrayList();
-        boolean expResult = false;
-        boolean result = instance.isEmpty();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        MyArrayList<Integer> nonEmptyList = new MyArrayList<>();
+        nonEmptyList.add(2);
+        nonEmptyList.add(18);
+        nonEmptyList.add(7);
+
+        MyArrayList<Integer> emptyList = new MyArrayList<>();
+
+        boolean nonEmptyListExpResult = false;
+        boolean emptyListExpResult = true;
+
+        boolean nonEmptyListResult = nonEmptyList.isEmpty();
+        boolean emptyListResult = emptyList.isEmpty();
+
+        assertEquals(nonEmptyListExpResult, nonEmptyListResult);
+        assertEquals(emptyListExpResult, emptyListResult);
     }
 
     /**
@@ -206,40 +214,36 @@ public class MyArrayListTest {
      */
     @Test
     public void testContains() {
-        Object toFind = null;
-        MyArrayList instance = new MyArrayList();
-        boolean expResult = false;
+        int toFindNone = 780403;
+        int toFind = 18;
+        MyArrayList<Integer> list1 = new MyArrayList<>();
+        list1.add(2);
+        list1.add(18);
+        list1.add(7);
+
+        boolean expResult = true;
         boolean result = instance.contains(toFind);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        expResult = false;
+        boolean result2 = instance.contains(toFindNone);
+        assertEquals(expResult, result2);
+
     }
 
     /**
      * Test of toArray method, of class MyArrayList.
      */
     @Test
-    public void testToArray_ObjectArr() {
-        Object[] toHold = null;
-        MyArrayList instance = new MyArrayList();
-        Object[] expResult = null;
-        Object[] result = instance.toArray(toHold);
+    public void testToArray() {
+        Object[] toHold = new Object[3];
+        MyArrayList<Object> list1 = new MyArrayList<>();
+        list1.add(2);
+        list1.add(18);
+        list1.add(7);
+        Object[] expResult = { 2, 18, 7 };
+        Object[] result = list1.toArray(toHold);
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of toArray method, of class MyArrayList.
-     */
-    @Test
-    public void testToArray_0args() {
-        MyArrayList instance = new MyArrayList();
-        Object[] expResult = null;
-        Object[] result = instance.toArray();
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -247,12 +251,9 @@ public class MyArrayListTest {
      */
     @Test
     public void testIterator() {
-        MyArrayList instance = new MyArrayList();
-        Iterator expResult = null;
+        MyArrayList<Object> instance = new MyArrayList<>();
         Iterator result = instance.iterator();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertNotNull(result);
     }
 
 }
