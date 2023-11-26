@@ -4,7 +4,11 @@ import java.util.Iterator;
 
 /**
  *
- * @author hesha
+ * MyArrayList Class
+ * 
+ * @author Heshan Punchihewa
+ * @author Patry Rusak
+ * @param <E>
  */
 @SuppressWarnings("unchecked")
 public class MyArrayList<E> implements ListADT<E>, Iterable<E> {
@@ -12,12 +16,19 @@ public class MyArrayList<E> implements ListADT<E>, Iterable<E> {
     private E[] data;
     private int size;
 
-    // constructor
+    /** 
+     * Creates a new instance of MyArrayList with the default capacity.
+     *
+     */
     public MyArrayList() {
         this.data = (E[]) new Object[DEFAULT_CAPACITY];
         this.size = 0;
     }
 
+    /**
+     * Creates a new instance of MyArrayList with the specified capacity.
+     * @param capacity
+     */
     public MyArrayList(int capacity) {
         this.data = (E[]) new Object[capacity];
         this.size = 0;

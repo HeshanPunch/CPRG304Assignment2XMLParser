@@ -42,12 +42,16 @@ public class MyStackTest {
      */
     @Test
     public void testPush() {
-        System.out.println("push");
-        Object toAdd = null;
-        MyStack instance = new MyStack();
+        String toAdd = "Apple";
+        MyStack<String> instance = new MyStack<String>();
+        instance.push("Facebook");
+        instance.push("Google");
         instance.push(toAdd);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String actualItemOnTop = instance.peek();
+        assertEquals(toAdd, actualItemOnTop);
+        int expectedSize = 3;
+        int actualSize = instance.size();
+        assertEquals(expectedSize, actualSize);
     }
 
     /**
@@ -55,13 +59,16 @@ public class MyStackTest {
      */
     @Test
     public void testPop() {
-        System.out.println("pop");
-        MyStack instance = new MyStack();
-        Object expResult = null;
-        Object result = instance.pop();
+        MyStack<String> instance = new MyStack<String>();
+        instance.push("Kobe");
+        instance.push("Lebron");
+        instance.push("Jordan");
+        int originalSize = instance.size();
+        String expResult = "Jordan";
+        String result = instance.pop();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(originalSize - 1, instance.size());
+
     }
 
     /**
@@ -69,13 +76,17 @@ public class MyStackTest {
      */
     @Test
     public void testPeek() {
-        System.out.println("peek");
-        MyStack instance = new MyStack();
-        Object expResult = null;
-        Object result = instance.peek();
+        MyStack<String> instance = new MyStack<String>();
+        instance.push("Kobe");
+        instance.push("Lebron");
+        instance.push("Jordan");
+        int originalSize = instance.size();
+
+        String expResult = "Jordan";
+        String result = instance.peek();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(originalSize, instance.size());
+
     }
 
     /**
@@ -83,39 +94,57 @@ public class MyStackTest {
      */
     @Test
     public void testClear() {
-        System.out.println("clear");
-        MyStack instance = new MyStack();
+        MyStack<String> instance = new MyStack<String>();
+        instance.push("Kobe");
+        instance.push("Lebron");
+        instance.push("Jordan");
+        assertEquals(3, instance.size());
         instance.clear();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(0, instance.size());
+
     }
 
     /**
      * Test of isEmpty method, of class MyStack.
      */
     @Test
-    public void testIsEmpty() {
-        System.out.println("isEmpty");
-        MyStack instance = new MyStack();
+    public void testIsEmpty_False() {
+        MyStack<String> instance = new MyStack<String>();
+        instance.push("Kobe");
+        instance.push("Lebron");
+        instance.push("Jordan");
         boolean expResult = false;
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+    }
+
+    /**
+     * Test of isEmpty method, of class MyStack.
+     */
+    @Test
+    public void testIsEmpty_True() {
+        MyStack<String> instance = new MyStack<String>();
+        boolean expResult = true;
+        boolean result = instance.isEmpty();
+        assertEquals(expResult, result);
+
     }
 
     /**
      * Test of toArray method, of class MyStack.
      */
     @Test
-    public void testToArray_0args() {
-        System.out.println("toArray");
-        MyStack instance = new MyStack();
-        Object[] expResult = null;
+    public void testToArray() {
+        MyStack<String> instance = new MyStack<String>();
+        instance.push("Kobe");
+        instance.push("Lebron");
+        instance.push("Jordan");
+        String[] expResult = { "Kobe", "Lebron", "Jordan" };
+
         Object[] result = instance.toArray();
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
