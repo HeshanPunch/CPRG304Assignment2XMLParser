@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author hesha
+ * @author Heshan
  */
 public class MyStackTest {
 
@@ -148,33 +148,32 @@ public class MyStackTest {
     }
 
     /**
-     * Test of toArray method, of class MyStack.
+     * Test of contains method, of class MyStack.
      */
     @Test
-    public void testToArray_ObjectArr() {
-        System.out.println("toArray");
-        Object[] holder = null;
-        MyStack instance = new MyStack();
-        Object[] expResult = null;
-        Object[] result = instance.toArray(holder);
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testContains_true() {
+        MyStack<Integer> instance = new MyStack<Integer>();
+        instance.push(24);
+        instance.push(23);
+        instance.push(6);
+        boolean expResult = true;
+        boolean result = instance.contains(24);
+        assertEquals(expResult, result);
+
     }
 
     /**
      * Test of contains method, of class MyStack.
      */
     @Test
-    public void testContains() {
-        System.out.println("contains");
-        Object toFind = null;
-        MyStack instance = new MyStack();
+    public void testContains_false() {
+        MyStack<Integer> instance = new MyStack<Integer>();
+        instance.push(24);
+        instance.push(23);
+        instance.push(6);
         boolean expResult = false;
-        boolean result = instance.contains(toFind);
+        boolean result = instance.contains(12);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -182,14 +181,14 @@ public class MyStackTest {
      */
     @Test
     public void testSearch() {
-        System.out.println("search");
-        Object toFind = null;
-        MyStack instance = new MyStack();
-        int expResult = 0;
+        MyStack<String> instance = new MyStack<String>();
+        instance.push("Kobe");
+        instance.push("Lebron");
+        instance.push("Jordan");
+        int expResult = 3;
+        String toFind = "Kobe";
         int result = instance.search(toFind);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -197,13 +196,10 @@ public class MyStackTest {
      */
     @Test
     public void testIterator() {
-        System.out.println("iterator");
-        MyStack instance = new MyStack();
-        Iterator expResult = null;
-        Iterator result = instance.iterator();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        MyStack<Object> instance = new MyStack<Object>();
+
+        Iterator<Object> result = instance.iterator();
+        assertNotNull(result);
     }
 
     /**
@@ -211,14 +207,41 @@ public class MyStackTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
-        StackADT that = null;
-        MyStack instance = new MyStack();
-        boolean expResult = false;
-        boolean result = instance.equals(that);
+        MyStack<String> instance1 = new MyStack<String>();
+        instance1.push("Kobe");
+        instance1.push("Lebron");
+        instance1.push("Jordan");
+
+        MyStack<String> instance2 = new MyStack<String>();
+        instance2.push("Kobe");
+        instance2.push("Lebron");
+        instance2.push("Jordan");
+
+        boolean expResult = true;
+
+        boolean result = instance1.equals(instance2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of equals method, of class MyStack.
+     */
+    @Test
+    public void testEquals_wrong_order() {
+        MyStack<String> instance1 = new MyStack<String>();
+        instance1.push("Kobe");
+        instance1.push("Lebron");
+        instance1.push("Jordan");
+
+        MyStack<String> instance2 = new MyStack<String>();
+        instance2.push("Jordan");
+        instance2.push("Kobe");
+        instance2.push("Lebron");
+
+        boolean expResult = false;
+
+        boolean result = instance1.equals(instance2);
+        assertEquals(expResult, result);
     }
 
     /**
@@ -226,13 +249,18 @@ public class MyStackTest {
      */
     @Test
     public void testSize() {
-        System.out.println("size");
-        MyStack instance = new MyStack();
+        MyStack<String> instance = new MyStack<String>();
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        instance.push("Kobe");
+        instance.push("Lebron");
+        instance.push("Jordan");
+        expResult = 3;
+        result = instance.size();
+        assertEquals(expResult, result);
+
     }
 
 }

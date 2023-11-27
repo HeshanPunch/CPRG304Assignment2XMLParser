@@ -29,6 +29,8 @@ public class MyDLLTests {
         MyArrayList<Integer> list = new MyArrayList<>();
         list.add(0, 1);
         list.add(0, 2);
+
+        
         // Verify the list contains [2, 1]
         System.out.println("Add to Front Test: " + (list.toString().equals("[2, 1]") ? "Passed" : "Failed"));
     }

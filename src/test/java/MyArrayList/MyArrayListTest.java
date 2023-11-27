@@ -19,7 +19,7 @@ import static org.junit.Assert.assertThrows;
 
 /**
  *
- * @author hesha
+ * @author Heshan
  */
 public class MyArrayListTest {
     private MyArrayList<Integer> instance;

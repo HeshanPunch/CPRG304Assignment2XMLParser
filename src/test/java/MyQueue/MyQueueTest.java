@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author hesha / Patryk
+ * @author Heshan
  */
 public class MyQueueTest {
     

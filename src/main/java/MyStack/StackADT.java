@@ -17,6 +17,7 @@ import java.io.*;
  * 
  * @author Don Heninger and Dave Watson
  * @version 1.1
+ * @param <E> the type of element
  */
 public interface StackADT<E> extends Serializable
 {
@@ -78,10 +79,7 @@ public interface StackADT<E> extends Serializable
 	 * array. Obeys the general contract of the Collection.toArray(Object[])
 	 * method.
 	 * 
-	 * @param toHold
-	 *            the array into which the elements of this stack are to be
-	 *            stored, if it is big enough; otherwise, a new array of the
-	 *            same runtime type is allocated for this purpose.
+     * @param holder
 	 * @return an array containing the elements of this stack.
 	 * @throws NullPointerException
 	 *             if the specified array is null.

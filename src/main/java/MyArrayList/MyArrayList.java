@@ -8,7 +8,7 @@ import java.util.Iterator;
  * 
  * @author Heshan Punchihewa
  * @author Patry Rusak
- * @param <E>
+ * @param <E> Generic type
  */
 @SuppressWarnings("unchecked")
 public class MyArrayList<E> implements ListADT<E>, Iterable<E> {
@@ -27,7 +27,7 @@ public class MyArrayList<E> implements ListADT<E>, Iterable<E> {
 
     /**
      * Creates a new instance of MyArrayList with the specified capacity.
-     * @param capacity
+     * @param capacity  the initial capacity of the MyArrayList 
      */
     public MyArrayList(int capacity) {
         this.data = (E[]) new Object[capacity];
@@ -39,7 +39,6 @@ public class MyArrayList<E> implements ListADT<E>, Iterable<E> {
      * in the list.
      *
      * @return The current element count.
-     * @throws java.lang.UnsupportedOperationException
      */
 
     @Override
@@ -79,7 +78,7 @@ public class MyArrayList<E> implements ListADT<E>, Iterable<E> {
      * @throws IndexOutOfBoundsException
      *                                   If the index is out of range:
      *                                   i.e.
-     *                                   (<code>index < 0 || index > size()</code>).
+     *                                   ({@code index < 0 || index > size()}).
      */
     @Override
     public boolean add(int index, E toAdd) throws NullPointerException, IndexOutOfBoundsException {
@@ -196,7 +195,7 @@ public class MyArrayList<E> implements ListADT<E>, Iterable<E> {
      * @throws IndexOutOfBoundsException
      *                                   If the index is out of range:
      *                                   i.e.
-     *                                   (<code>index < 0 || index >= size()</code>).
+     *                                   ({@code index < 0 || index >= size()}).
      */
     @Override
     public E get(int index) throws IndexOutOfBoundsException {
@@ -218,7 +217,8 @@ public class MyArrayList<E> implements ListADT<E>, Iterable<E> {
      * @throws IndexOutOfBoundsException
      *                                   If the index is out of range:
      *                                   i.e.
-     *                                   (<code>index < 0 || index >= size()</code>).
+     *      *                                   ({@code  < 0 || index >= size()}).
+
      */
     @Override
     public E remove(int index) throws IndexOutOfBoundsException {
@@ -283,7 +283,7 @@ public class MyArrayList<E> implements ListADT<E>, Iterable<E> {
      * @throws IndexOutOfBoundsException
      *                                   If the index is out of range:
      *                                   i.e.
-     *                                   (<code>index < 0 || index >= size()</code>).
+     *                                   ({@code index < 0 || index >= size()}).
      */
     @Override
     public E set(int index, E toChange) throws NullPointerException, IndexOutOfBoundsException {

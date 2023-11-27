@@ -16,7 +16,8 @@ import java.util.Iterator;
  * Updated On: Nov 15, 2018 by kitty
  * 
  * Queue.java
- * @author Don Heninger & Dave Watson
+ * @author Don Heninger and Dave Watson
+ * @param <E> The type of elements
  */
 public interface QueueADT<E> extends Serializable
 {
@@ -34,7 +35,6 @@ public interface QueueADT<E> extends Serializable
 	/**
 	 * Dequeue will remove the first item that was placed in the Queue.
 	 * @return the first item in the Queue.
-	 * @throws EmptyQueueException raised when the queue's length is zero (0).
 	 */
 	public E dequeue(); // throws EmptyQueueException;
 	
@@ -43,7 +43,6 @@ public interface QueueADT<E> extends Serializable
 	 * removing from the queue.
 	 * 
 	 * @return the first item in the queue.
-	 * @throws EmptyQueueException raised when the queue's length is zero (0).
 	 */
 	public E peek(); //throws EmptyQueueException;
 	
@@ -89,10 +88,7 @@ public interface QueueADT<E> extends Serializable
 	 * array. Obeys the general contract of the Collection.toArray(Object[])
 	 * method.
 	 * 
-	 * @param toHold
-	 *            the array into which the elements of this queue are to be
-	 *            stored, if it is big enough; otherwise, a new array of the
-	 *            same runtime type is allocated for this purpose.
+     * @param holder
 	 * @return an array containing the elements of this queue.
 	 * @throws NullPointerException
 	 *          if the specified array is null.

@@ -50,7 +50,7 @@ public interface ListADT<E> extends Serializable
 	 * 			<code>null</code> elements.
 	 * @throws IndexOutOfBoundsException
 	 * 			If the index is out of range: 
-	 * 			i.e. (<code>index < 0 || index > size()</code>).
+	 * 			i.e. ({@code index < 0 || index > size() }).
 	 */
 	public boolean add( int index, E toAdd ) throws NullPointerException,
 													IndexOutOfBoundsException;
@@ -104,7 +104,8 @@ public interface ListADT<E> extends Serializable
 	 * @return The element at the specified position in this list.
 	 * @throws IndexOutOfBoundsException
 	 * 			If the index is out of range: 
-	 * 			i.e. (<code>index < 0 || index >= size()</code>).
+         *                       i.e. ({@code index < 0 || index >= size()})
+	 * 			
 	 */
 	public E get( int index ) throws IndexOutOfBoundsException;
 	
@@ -119,7 +120,7 @@ public interface ListADT<E> extends Serializable
 	 * @return The removed element.
 	 * @throws IndexOutOfBoundsException
 	 * 			If the index is out of range: 
-	 * 			i.e. (<code>index < 0 || index >= size()</code>).
+	 * 			i.e. ({@code index < 0 || index >= size()}).
 	 */
 	public E remove( int index ) throws IndexOutOfBoundsException;
 	
@@ -157,7 +158,7 @@ public interface ListADT<E> extends Serializable
 	 * 			<code>null</code> elements.
 	 * @throws IndexOutOfBoundsException
 	 * 			If the index is out of range: 
-	 * 			i.e. (<code>index < 0 || index >= size()</code>).
+	 * 			i.e. ({@code index < 0 || index >= size()}).
 	 */
 	public E set( int index, E toChange ) throws NullPointerException,
 												IndexOutOfBoundsException;
@@ -220,7 +221,7 @@ public interface ListADT<E> extends Serializable
 	 * 
 	 * @return An iterator over the elements in this list, in proper sequence.
 	 * 			NB: The return is of type 
-	 * 			<code>linearUtilities.Iterator<E></code>,
+	 * 			<code> linearUtilities.Iterator </code>,
 	 * 			not <code>java.util.Iterator</code>.
 	 */
 	public Iterator<E> iterator();	

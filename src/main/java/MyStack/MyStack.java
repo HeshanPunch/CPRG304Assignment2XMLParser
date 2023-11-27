@@ -11,7 +11,9 @@ import MyArrayList.MyArrayList;
  * @author Heshan Punchihewa
  * @author Patry Rusak
  * 
- * @param <E>
+ * Stack Class that implements the StackADT interface.
+ * 
+ * @param <E> The type of element in the stack.
  */
 public class MyStack<E> implements StackADT<E> {
 
@@ -19,6 +21,9 @@ public class MyStack<E> implements StackADT<E> {
     // Use your MyArrayList.java implementation as the underlying data structure
     private MyArrayList<E> list;
 
+    /**
+     *Creates a stack with an initial capacity of ten.
+     */
     public MyStack() {
         this.list = new MyArrayList<>();
     }
@@ -113,10 +118,7 @@ public class MyStack<E> implements StackADT<E> {
      * array. Obeys the general contract of the Collection.toArray(Object[])
      * method.
      * 
-     * @param toHold
-     *               the array into which the elements of this stack are to be
-     *               stored, if it is big enough; otherwise, a new array of the
-     *               same runtime type is allocated for this purpose.
+     * @param holder
      * @return an array containing the elements of this stack.
      * @throws NullPointerException
      *                              if the specified array is null.
@@ -172,7 +174,7 @@ public class MyStack<E> implements StackADT<E> {
 
         for (int i = this.size() - 1; i >= 0; i--) {
             if (toFind.equals(list.get(i))) {
-                return i + 1;
+                return this.size() - i;
             }
         }
 
