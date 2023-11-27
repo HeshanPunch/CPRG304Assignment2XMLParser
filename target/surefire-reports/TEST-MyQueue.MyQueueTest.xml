@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MyQueue.MyQueueTest" time="0.08" tests="11" errors="4" skipped="0" failures="7">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MyQueue.MyQueueTest" time="0.056" tests="11" errors="4" skipped="0" failures="7">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="CA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\hesha\AppData\Local\Temp\surefire13814794467989782974\surefirebooter-20231124150746435_3.jar C:\Users\hesha\AppData\Local\Temp\surefire13814794467989782974 2023-11-24T15-07-46_285-jvmRun1 surefire-20231124150746435_1tmp surefire_0-20231124150746435_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\hesha\AppData\Local\Temp\surefire12233425056381009359\surefirebooter-20231126235923124_3.jar C:\Users\hesha\AppData\Local\Temp\surefire12233425056381009359 2023-11-26T23-59-23_017-jvmRun1 surefire-20231126235923124_1tmp surefire_0-20231126235923124_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="MyQueue.MyQueueTest"/>
     <property name="surefire.test.class.path" value="C:\Users\hesha\Desktop\SAIT\CPRG304-OOP3\Assignment2\Assignment2_2\target\test-classes;C:\Users\hesha\Desktop\SAIT\CPRG304-OOP3\Assignment2\Assignment2_2\target\classes;C:\Users\hesha\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\hesha\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\hesha\AppData\Local\Temp\surefire13814794467989782974\surefirebooter-20231124150746435_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\hesha\AppData\Local\Temp\surefire12233425056381009359\surefirebooter-20231126235923124_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="20.0.2+9"/>
@@ -61,7 +61,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="testEnqueue" classname="MyQueue.MyQueueTest" time="0.013">
+  <testcase name="testEnqueue" classname="MyQueue.MyQueueTest" time="0.011">
     <error message="Cannot enqueue element of type null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot enqueue element of type null
 	at MyQueue.MyQueue.enqueue(MyQueue.java:32)
 	at MyQueue.MyQueueTest.testEnqueue(MyQueueTest.java:63)
@@ -99,7 +99,7 @@
     <system-out><![CDATA[enqueue
 ]]></system-out>
   </testcase>
-  <testcase name="testPeek" classname="MyQueue.MyQueueTest" time="0.001">
+  <testcase name="testPeek" classname="MyQueue.MyQueueTest" time="0.0">
     <failure message="The test case is a prototype." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: The test case is a prototype.
 	at org.junit.Assert.fail(Assert.java:89)
 	at MyQueue.MyQueueTest.testPeek(MyQueueTest.java:123)
@@ -137,7 +137,7 @@
     <system-out><![CDATA[peek
 ]]></system-out>
   </testcase>
-  <testcase name="testSize" classname="MyQueue.MyQueueTest" time="0.001">
+  <testcase name="testSize" classname="MyQueue.MyQueueTest" time="0.003">
     <failure message="The test case is a prototype." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: The test case is a prototype.
 	at org.junit.Assert.fail(Assert.java:89)
 	at MyQueue.MyQueueTest.testSize(MyQueueTest.java:355)
@@ -175,7 +175,7 @@
     <system-out><![CDATA[size
 ]]></system-out>
   </testcase>
-  <testcase name="testDequeue" classname="MyQueue.MyQueueTest" time="0.001">
+  <testcase name="testDequeue" classname="MyQueue.MyQueueTest" time="0.0">
     <failure message="The test case is a prototype." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: The test case is a prototype.
 	at org.junit.Assert.fail(Assert.java:89)
 	at MyQueue.MyQueueTest.testDequeue(MyQueueTest.java:94)
@@ -213,7 +213,7 @@
     <system-out><![CDATA[dequeue
 ]]></system-out>
   </testcase>
-  <testcase name="testEquals" classname="MyQueue.MyQueueTest" time="0.002">
+  <testcase name="testEquals" classname="MyQueue.MyQueueTest" time="0.001">
     <failure message="The test case is a prototype." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: The test case is a prototype.
 	at org.junit.Assert.fail(Assert.java:89)
 	at MyQueue.MyQueueTest.testEquals(MyQueueTest.java:238)
@@ -251,7 +251,7 @@
     <system-out><![CDATA[equals
 ]]></system-out>
   </testcase>
-  <testcase name="testIsFull" classname="MyQueue.MyQueueTest" time="0.001">
+  <testcase name="testIsFull" classname="MyQueue.MyQueueTest" time="0.0">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at MyQueue.MyQueueTest$10.isFull(MyQueueTest.java:319)
 	at MyQueue.MyQueueTest.testIsFull(MyQueueTest.java:323)
@@ -289,7 +289,7 @@
     <system-out><![CDATA[isFull
 ]]></system-out>
   </testcase>
-  <testcase name="testIsEmpty" classname="MyQueue.MyQueueTest" time="0.0">
+  <testcase name="testIsEmpty" classname="MyQueue.MyQueueTest" time="0.001">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<false> but was:<true>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
@@ -447,7 +447,7 @@
     <system-out><![CDATA[dequeueAll
 ]]></system-out>
   </testcase>
-  <testcase name="testToArray_ObjectArr" classname="MyQueue.MyQueueTest" time="0.0">
+  <testcase name="testToArray_ObjectArr" classname="MyQueue.MyQueueTest" time="0.001">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
 	at MyQueue.MyQueueTest$9.toArray(MyQueueTest.java:285)
 	at MyQueue.MyQueueTest.testToArray_ObjectArr(MyQueueTest.java:294)

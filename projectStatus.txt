@@ -1,0 +1,2 @@
+All of the requriements for the "new version" of Assignment 2 is complete
+We opted not to do the XML portion and instead focus on this

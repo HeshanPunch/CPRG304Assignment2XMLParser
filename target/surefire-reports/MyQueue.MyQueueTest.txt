@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: MyQueue.MyQueueTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 7, Errors: 4, Skipped: 0, Time elapsed: 0.080 s <<< FAILURE! -- in MyQueue.MyQueueTest
-MyQueue.MyQueueTest.testEnqueue -- Time elapsed: 0.013 s <<< ERROR!
+Tests run: 11, Failures: 7, Errors: 4, Skipped: 0, Time elapsed: 0.056 s <<< FAILURE! -- in MyQueue.MyQueueTest
+MyQueue.MyQueueTest.testEnqueue -- Time elapsed: 0.011 s <<< ERROR!
 java.lang.NullPointerException: Cannot enqueue element of type null
 	at MyQueue.MyQueue.enqueue(MyQueue.java:32)
 	at MyQueue.MyQueueTest.testEnqueue(MyQueueTest.java:63)
@@ -37,7 +37,7 @@ java.lang.NullPointerException: Cannot enqueue element of type null
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-MyQueue.MyQueueTest.testPeek -- Time elapsed: 0.001 s <<< FAILURE!
+MyQueue.MyQueueTest.testPeek -- Time elapsed: 0 s <<< FAILURE!
 java.lang.AssertionError: The test case is a prototype.
 	at org.junit.Assert.fail(Assert.java:89)
 	at MyQueue.MyQueueTest.testPeek(MyQueueTest.java:123)
@@ -72,7 +72,7 @@ java.lang.AssertionError: The test case is a prototype.
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-MyQueue.MyQueueTest.testSize -- Time elapsed: 0.001 s <<< FAILURE!
+MyQueue.MyQueueTest.testSize -- Time elapsed: 0.003 s <<< FAILURE!
 java.lang.AssertionError: The test case is a prototype.
 	at org.junit.Assert.fail(Assert.java:89)
 	at MyQueue.MyQueueTest.testSize(MyQueueTest.java:355)
@@ -107,7 +107,7 @@ java.lang.AssertionError: The test case is a prototype.
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-MyQueue.MyQueueTest.testDequeue -- Time elapsed: 0.001 s <<< FAILURE!
+MyQueue.MyQueueTest.testDequeue -- Time elapsed: 0 s <<< FAILURE!
 java.lang.AssertionError: The test case is a prototype.
 	at org.junit.Assert.fail(Assert.java:89)
 	at MyQueue.MyQueueTest.testDequeue(MyQueueTest.java:94)
@@ -142,7 +142,7 @@ java.lang.AssertionError: The test case is a prototype.
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-MyQueue.MyQueueTest.testEquals -- Time elapsed: 0.002 s <<< FAILURE!
+MyQueue.MyQueueTest.testEquals -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: The test case is a prototype.
 	at org.junit.Assert.fail(Assert.java:89)
 	at MyQueue.MyQueueTest.testEquals(MyQueueTest.java:238)
@@ -177,7 +177,7 @@ java.lang.AssertionError: The test case is a prototype.
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-MyQueue.MyQueueTest.testIsFull -- Time elapsed: 0.001 s <<< ERROR!
+MyQueue.MyQueueTest.testIsFull -- Time elapsed: 0 s <<< ERROR!
 java.lang.UnsupportedOperationException: Not supported yet.
 	at MyQueue.MyQueueTest$10.isFull(MyQueueTest.java:319)
 	at MyQueue.MyQueueTest.testIsFull(MyQueueTest.java:323)
@@ -212,7 +212,7 @@ java.lang.UnsupportedOperationException: Not supported yet.
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-MyQueue.MyQueueTest.testIsEmpty -- Time elapsed: 0 s <<< FAILURE!
+MyQueue.MyQueueTest.testIsEmpty -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: expected:<false> but was:<true>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
@@ -358,7 +358,7 @@ java.lang.AssertionError: The test case is a prototype.
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-MyQueue.MyQueueTest.testToArray_ObjectArr -- Time elapsed: 0 s <<< ERROR!
+MyQueue.MyQueueTest.testToArray_ObjectArr -- Time elapsed: 0.001 s <<< ERROR!
 java.lang.UnsupportedOperationException: Not supported yet.
 	at MyQueue.MyQueueTest$9.toArray(MyQueueTest.java:285)
 	at MyQueue.MyQueueTest.testToArray_ObjectArr(MyQueueTest.java:294)

@@ -15,7 +15,7 @@
     <property name="user.country" value="CA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\hesha\AppData\Local\Temp\surefire6226099525282361160\surefirebooter-20231126232048725_3.jar C:\Users\hesha\AppData\Local\Temp\surefire6226099525282361160 2023-11-26T23-20-48_621-jvmRun1 surefire-20231126232048725_1tmp surefire_0-20231126232048725_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\hesha\AppData\Local\Temp\surefire10012766257422537038\surefirebooter-20231126235931524_3.jar C:\Users\hesha\AppData\Local\Temp\surefire10012766257422537038 2023-11-26T23-59-31_414-jvmRun1 surefire-20231126235931524_1tmp surefire_0-20231126235931524_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="MyStack.MyStackTest"/>
     <property name="surefire.test.class.path" value="C:\Users\hesha\Desktop\SAIT\CPRG304-OOP3\Assignment2\Assignment2_2\target\test-classes;C:\Users\hesha\Desktop\SAIT\CPRG304-OOP3\Assignment2\Assignment2_2\target\classes;C:\Users\hesha\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\hesha\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\hesha\AppData\Local\Temp\surefire6226099525282361160\surefirebooter-20231126232048725_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\hesha\AppData\Local\Temp\surefire10012766257422537038\surefirebooter-20231126235931524_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="20.0.2+9"/>
