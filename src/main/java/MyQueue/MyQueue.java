@@ -10,7 +10,7 @@ import java.util.Objects;
  * @author Patryk
  * @param <E> The type of elements in the queue.
  */
-public abstract class MyQueue<E> implements QueueADT<E> {
+public class MyQueue<E> implements QueueADT<E> {
     private ArrayList<E> queue;
 
     /**
@@ -90,7 +90,8 @@ public abstract class MyQueue<E> implements QueueADT<E> {
 
     /**
      * Compares this queue with another queue for equality.
-     * Two queues are considered equal if they have the same elements in the same order.
+     * Two queues are considered equal if they have the same elements in the same
+     * order.
      *
      * @param that The queue to compare with.
      * @return true if the queues are equal, false otherwise.
@@ -132,5 +133,45 @@ public abstract class MyQueue<E> implements QueueADT<E> {
     @Override
     public int size() {
         return queue.size();
+    }
+
+    /**
+     * Returns an array containing all of the elements in this list in proper
+     * sequence. Obeys the general contract of the Collection.toArray method.
+     * 
+     * @return an array containing all of the elements in this list in proper
+     *         sequence.
+     */
+    @Override
+    public Object[] toArray() {
+        return this.queue.toArray();
+    }
+
+    /**
+     * Returns an array containing all of the elements in this list in proper
+     * sequence; the runtime type of the returned array is that of the specified
+     * array. Obeys the general contract of the Collection.toArray(Object[])
+     * method.
+     * 
+     * @param holder
+     * @return an array containing the elements of this queue.
+     * @throws NullPointerException
+     *                              if the specified array is null.
+     */
+    @Override
+    public E[] toArray(E[] holder) throws NullPointerException {
+        return this.queue.toArray(holder);
+    }
+
+    /**
+     * (Optional Method) Returns true if the number of items in the queue
+     * equals the length. This operation is only implement when a fixed length
+     * queue is required.
+     * 
+     * @return <code>true</code> if queue is at capacity.
+     */
+    @Override
+    public boolean isFull() {
+        throw new UnsupportedOperationException("Unimplemented method 'isFull'");
     }
 }

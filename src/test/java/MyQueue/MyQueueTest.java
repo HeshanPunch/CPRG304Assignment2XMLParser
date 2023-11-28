@@ -17,22 +17,22 @@ import static org.junit.Assert.*;
  * @author Heshan
  */
 public class MyQueueTest {
-    
+
     public MyQueueTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -42,27 +42,9 @@ public class MyQueueTest {
      */
     @Test
     public void testEnqueue() {
-        System.out.println("enqueue");
-        Object toAdd = null;
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
+        MyQueue<Integer> instance = new MyQueue<>();
+        Integer toAdd = 5;
         instance.enqueue(toAdd);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -70,28 +52,22 @@ public class MyQueueTest {
      */
     @Test
     public void testDequeue() {
-        System.out.println("dequeue");
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        MyQueue<Integer> instance = new MyQueue<>();
+        instance.enqueue(5);
+        instance.enqueue(6);
+        instance.enqueue(7);
 
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        int expectedSize = 3;
+        assertEquals(expectedSize, instance.size());
 
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
-        Object expResult = null;
-        Object result = instance.dequeue();
+        int result = instance.dequeue();
+        int expResult = 5;
+
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        expectedSize = 2;
+        assertEquals(expectedSize, instance.size());
+
     }
 
     /**
@@ -99,28 +75,19 @@ public class MyQueueTest {
      */
     @Test
     public void testPeek() {
-        System.out.println("peek");
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        MyQueue<Integer> instance = new MyQueue<>();
 
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        instance.enqueue(5);
+        instance.enqueue(6);
+        instance.enqueue(7);
 
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
-        Object expResult = null;
-        Object result = instance.peek();
+        int result = instance.peek();
+        int expResult = 5;
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        int expectedSize = 3;
+        assertEquals(expectedSize, instance.size());
+
     }
 
     /**
@@ -128,26 +95,18 @@ public class MyQueueTest {
      */
     @Test
     public void testDequeueAll() {
-        System.out.println("dequeueAll");
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        MyQueue<Integer> instance = new MyQueue<>();
 
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        instance.enqueue(5);
+        instance.enqueue(6);
+        instance.enqueue(7);
+        int expectedSize = 3;
+        assertEquals(expectedSize, instance.size());
 
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
         instance.dequeueAll();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        expectedSize = 0;
+        assertEquals(expectedSize, instance.size());
     }
 
     /**
@@ -155,28 +114,18 @@ public class MyQueueTest {
      */
     @Test
     public void testIsEmpty() {
-        System.out.println("isEmpty");
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
-        boolean expResult = false;
+        MyQueue<Integer> instance = new MyQueue<>();
+        boolean expResult = true;
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        instance.enqueue(5);
+        instance.enqueue(6);
+
+        expResult = false;
+        result = instance.isEmpty();
+        assertEquals(expResult, result);
+
     }
 
     /**
@@ -184,28 +133,10 @@ public class MyQueueTest {
      */
     @Test
     public void testIterator() {
-        System.out.println("iterator");
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        MyQueue<Integer> instance = new MyQueue<>();
 
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
-        Iterator expResult = null;
-        Iterator result = instance.iterator();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Iterator<Integer> result = instance.iterator();
+        assertNotNull(result);
     }
 
     /**
@@ -213,117 +144,42 @@ public class MyQueueTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
-        QueueADT that = null;
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        MyQueue<Integer> thisQueue = new MyQueue<>();
+        thisQueue.enqueue(5);
+        thisQueue.enqueue(6);
 
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        MyQueue<Integer> thatQueue = new MyQueue<>();
+        thatQueue.enqueue(5);
+        thatQueue.enqueue(6);
 
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
-        boolean expResult = false;
-        boolean result = instance.equals(that);
+        boolean expResult = true;
+        boolean result = thisQueue.equals(thatQueue);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        MyQueue<Integer> specialQueue = new MyQueue<>();
+        specialQueue.enqueue(5234);
+        specialQueue.enqueue(632);
+
+        expResult = false;
+        result = thisQueue.equals(specialQueue);
+        assertEquals(expResult, result);
+
     }
 
     /**
      * Test of toArray method, of class MyQueue.
      */
     @Test
-    public void testToArray_0args() {
-        System.out.println("toArray");
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+    public void testToArray() {
+        MyQueue<Integer> instance = new MyQueue<>();
+        instance.enqueue(5);
+        instance.enqueue(6);
 
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
-        Object[] expResult = null;
-        Object[] result = instance.toArray();
+        Integer[] holder = new Integer[2];
+        Integer[] result = instance.toArray(holder);
+        Integer[] expResult = { 5, 6 };
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of toArray method, of class MyQueue.
-     */
-    @Test
-    public void testToArray_ObjectArr() {
-        System.out.println("toArray");
-        Object[] holder = null;
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
-        Object[] expResult = null;
-        Object[] result = instance.toArray(holder);
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of isFull method, of class MyQueue.
-     */
-    @Test
-    public void testIsFull() {
-        System.out.println("isFull");
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
-        boolean expResult = false;
-        boolean result = instance.isFull();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -331,28 +187,17 @@ public class MyQueueTest {
      */
     @Test
     public void testSize() {
-        System.out.println("size");
-        MyQueue instance = new MyQueue() {
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public Object[] toArray(Object[] holder) throws NullPointerException {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public boolean isFull() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
+        MyQueue<Integer> instance = new MyQueue<>();
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        instance.enqueue(5);
+        instance.enqueue(6);
+        
+        expResult = 2;
+        result = instance.size();
+        assertEquals(expResult, result);
     }
-    
+
 }
