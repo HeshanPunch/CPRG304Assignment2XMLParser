@@ -1,7 +1,7 @@
 Assignment: Creating ADTs and Using an XML Parser (modified requirement, opt-out XML portion)
 Group 11
 Heshan Punchihewa
-Patry Rusak
+Patryk Rusak
 
 All of the Data Type implementation can be found in src\main\java
 - MyStack Implementation
